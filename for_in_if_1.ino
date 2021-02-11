@@ -18,8 +18,8 @@ nevereverdothis(i, end);
 void nevereverdothis(int i, int end){ 
 	if(i < end){ 
 		digitalWrite(ledarray[i],HIGH);
-     	delay(200);
-     	digitalWrite(ledarray[i],LOW);   
+		delay(200);
+		digitalWrite(ledarray[i],LOW);   
 		nevereverdothis(i+1, end);
 	} 
 } 
