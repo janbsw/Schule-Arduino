@@ -21,6 +21,5 @@ void nevereverdothis(int i, int end){
      	delay(200);
      	digitalWrite(ledarray[i],LOW);   
 		nevereverdothis(i+1, end);
-      	//Bitte nicht angewöhnen, würde man so nicht machen lg Jan
 	} 
 } 
