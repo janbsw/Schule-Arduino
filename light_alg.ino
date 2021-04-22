@@ -9,11 +9,11 @@ bool working = true;
 void setup()
 {
 	Serial.begin(9600);
-	for (byte i = 0; i < (sizeof(pinabfolge) / sizeof(pinabfolge[0])); i++)
-	{
-		started[i] = 0;
-		pinMode(pinabfolge[i], OUTPUT);
-	}
+for (byte i = 0; i < (sizeof(pinabfolge) / sizeof(pinabfolge[0])); i++)
+{
+	started[i] = 0;
+	pinMode(pinabfolge[i], OUTPUT);
+}
   if(sizeof(delayvoran) / sizeof(delayvoran[0])< sizeof(pinabfolge) / sizeof(pinabfolge[0])){
 	working = false;
   }
