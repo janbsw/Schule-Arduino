@@ -4,6 +4,7 @@ int delayabfolge[] = { 500, 30, 200 };
 int started[sizeof(pinabfolge) / sizeof(pinabfolge[0])];
 int startedtime[sizeof(pinabfolge) / sizeof(pinabfolge[0])];
 int nt;
+bool working = true;
 
 void setup()
 {
@@ -13,11 +14,17 @@ void setup()
 		started[i] = 0;
 		pinMode(pinabfolge[i], OUTPUT);
 	}
+  if(sizeof(delayvoran) / sizeof(delayvoran[0])< sizeof(pinabfolge) / sizeof(pinabfolge[0])){
+	working = false;
+  }
+  if(sizeof(delayabfolge) / sizeof(delayabfolge[0])< sizeof(pinabfolge) / sizeof(pinabfolge[0])){
+	working = false;
+  }
 }
-
-void loop()
-{
+void loop(){
+  while(working){
 	lightalg();
+  }
 }
 
 void lightalg()
